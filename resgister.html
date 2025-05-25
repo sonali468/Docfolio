@@ -1,100 +1,74 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Registration Form</title>
+  <meta charset="UTF-8">
+  <title>Doctor Registration</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body style="font-size: 27;">
-<h1><center>Thank You For Your Service Dr.</center></h1>
-<h1><center>Register for Free and Enhance Your Journey.</center></h1>
-<form name="f5rmREGISTRATION" METHOD="POST" ACTION="#">
-     <Center>
-     <table border="0" style="font-size: 20;">
-<Tr>
-     <td> Name</td>
-     <td>&nbsp</td>
-     <td><input type="textbox" name="txtFirstName"></td>
-</Tr>
-<Tr>
-     <td>Gender</td>
-     <td>&nbsp</td>
-     <td>
-     <input type="radio" name="Gender" value="Male">Male
-     <input type="radio" name="Gender" value="Female">Female
-     <input type="radio" name="Gender" value="Other">Other
-     </td>
-</Tr>
-<Tr>
-     <td>Education Qualification</td>
-     
-     <td>&nbsp</td>
-     <td><input type="textbox" name="txtFirstName"></td>
-</Tr>
-<Tr>
-     <td>Mode of Check-Up</td>
-     <td>&nbsp</td>
-     <td>
-     <input type="radio" name="Mode" value="Online">Online
-     <input type="radio" name="Mode" value="Offline">Offline
-     <input type="radio" name="Mode" value="Hybrid">Hybrid
-     </td>
-</Tr>
-<Tr>
-     <td>Specialization</td>
-     <td>&nbsp</td>
-     <td><input type="textbox" name="txtFirstName"></td>
-</Tr>
-<Tr>
-     <td>Gmail address</td>
-     <td>&nbsp</td>
-     <td><input type="textbox" name="txtFirstName"></td>
-</Tr>
-<Tr>
-     <td>Appointment Link</td>
-     <td>&nbsp</td>
-     <td><input type="textbox" name="txtFirstName" textarea="150"></td>
-</Tr>
-<Tr>
-     <td>Work Address</td>
-     <td>&nbsp</td>
-     <td>
-     <textarea name="txtaddress"rows="3" cols="20">Insert Address Here</textarea>
-     </td>
-</Tr>
-<Tr>
-     <td>City</td>
-     <td>&nbsp</td>
-     <td>
-     <Select Name="city">
-     <option selected>select</option>
-     <option>Ahmedabad</option>
-     <option>Baroda</option>
-     <option>Rajkot</option>
-     <option>Surat</option>
-     <option>Gandhinagar</option>
-     <option>Amreli</option>
-     <option>Bhavnagar</option>
-     <option>Other</option>
-     </td>
-</Tr>
-<tr>
-     <td>Upload Your Medical Degrees</td>
-     <td>&nbsp</td>
-     <td><input type="file" id="media" name="media" accept="audio/,video/,image/*"></td>
-</tr>
-<tr>
-     <td>Upload Your Portfolio</td>
-     <td>&nbsp</td>
-     <td><input type="file" id="media" name="media" accept="audio/,video/,image/*"></td>
-</tr>
-<tr>
-     <td>&nbsp</td>
-     <td>&nbsp</td>
-     <td>
-     <input type="submit" name="cmdsubmit" value="Submit">
-     <input type="reset" name="cmdreset" value="Reset">
-     </td>
-</tr>
-     </table>
-     <Center>
-</form>
+<body class="form-body">
+
+  <div class="form-container">
+    <h1>Docters! Thank you for your service</h1>
+    <h2>Register for free and enhance your journey.</h2>
+
+    <form method="POST" action="#">
+      <label for="fullName">Full Name</label>
+      <input type="text" name="fullName" required>
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Gender" value="Male"> Male</label>
+        <label><input type="radio" name="Gender" value="Female"> Female</label>
+        <label><input type="radio" name="Gender" value="Other"> Other</label>
+      </div>
+
+      <label for="qualification">Educational Qualification</label>
+      <input type="text" name="qualification" required>
+
+      <label>Mode of Check-Up</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Mode" value="Online"> Online</label>
+        <label><input type="radio" name="Mode" value="Offline"> Offline</label>
+        <label><input type="radio" name="Mode" value="Hybrid"> Hybrid</label>
+      </div>
+
+      <label for="specialization">Specialization</label>
+      <input type="text" name="specialization" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" name="email" required>
+
+      <label for="appointmentLink">Appointment Link</label>
+      <input type="url" name="appointmentLink">
+
+      <label for="workAddress">Work Address</label>
+      <textarea name="workAddress" rows="3">Insert Address Here</textarea>
+
+      <label for="city">City</label>
+      <select name="city">
+        <option selected>Select</option>
+        <option>Ahmedabad</option>
+        <option>Baroda</option>
+        <option>Rajkot</option>
+        <option>Surat</option>
+        <option>Gandhinagar</option>
+        <option>Amreli</option>
+        <option>Bhavnagar</option>
+        <option>Other</option>
+      </select>
+
+      <label>Upload Medical Degrees</label>
+      <input type="file" name="degrees" accept="image/*,application/pdf">
+
+      <label>Upload Portfolio</label>
+      <input type="file" name="portfolio" accept="image/*,application/pdf">
+
+      <div class="button-group">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+
 </body>
 </html>
